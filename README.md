@@ -13,4 +13,18 @@ This project applies **Natural Language Processing (NLP)** to analyze customer s
 - Generate outputs that can guide business decisions on customer satisfaction.
 
 ---
+## 📂 Project Structure
+data/
+├── raw/ # Original datasets (e.g., reviews.csv)
+├── interim/ # Intermediate versions (tokenized/cleaned text)
+└── processed/ # Final ready-to-train datasets
+notebooks/
+└── sentiment_analysis.ipynb # Narrative notebook for EDA and training
+scripts/
+├── text_preprocessing.py # Functions for text cleaning
+├── sentiment_model.py # Training pipeline
+└── evaluate_text.py # Model evaluation utilities
+results/
+└── sentiment/ # Generated model outputs and visualizations
+requirements.txt # Python dependencies
 

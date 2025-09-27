@@ -13,18 +13,36 @@ This project applies **Natural Language Processing (NLP)** to analyze customer s
 - Generate outputs that can guide business decisions on customer satisfaction.
 
 ---
-## 📂 Project Structure
-data/
-├── raw/ # Original datasets (e.g., reviews.csv)
-├── interim/ # Intermediate versions (tokenized/cleaned text)
-└── processed/ # Final ready-to-train datasets
-notebooks/
-└── sentiment_analysis.ipynb # Narrative notebook for EDA and training
-scripts/
-├── text_preprocessing.py # Functions for text cleaning
-├── sentiment_model.py # Training pipeline
-└── evaluate_text.py # Model evaluation utilities
-results/
-└── sentiment/ # Generated model outputs and visualizations
-requirements.txt # Python dependencies
 
+## 🛠️ Methodology
+1. **Data Ingestion**  
+   Load raw customer review data from `data/raw/reviews.csv`.
+
+2. **Text Preprocessing**  
+   - Lowercasing  
+   - Removing punctuation  
+   - Tokenization  
+   - Stopword removal (NLTK)  
+   - Lemmatization  
+
+3. **Feature Engineering**  
+   Convert cleaned text into numerical features using **TF-IDF Vectorization**.
+
+4. **Modeling**  
+   - Train a **Logistic Regression** classifier on the processed data.  
+   - Split into training and testing sets for robust evaluation.  
+
+5. **Evaluation**  
+   - Generate **classification report** (precision, recall, F1-score).  
+   - Plot and save a **confusion matrix**.  
+   - Store outputs in `results/sentiment/`.
+
+---
+
+## ⚙️ Installation
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/british-airways-sentiment-analysis.git
+cd british-airways-sentiment-analysis
+pip install -r requirements.txt
